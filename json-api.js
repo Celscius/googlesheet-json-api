@@ -1,9 +1,11 @@
 function doGet(e) {
-
-    var sheet = SpreadsheetApp.getActive().getSheetByName('image')
+    const sheet = "image";
+    
+    var sheet = SpreadsheetApp.getActive().getSheetByName(sheet)
     const lastRow = sheet.getLastRow()
     const lastColumn = sheet.getLastColumn()
 
+    //sheet data into array
     var rng = sheet.getRange(1, 1, lastRow, lastColumn)
     var vals = rng.getValues()
 
